@@ -4,7 +4,15 @@
   "description": "Javascript Development Environment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "esw webpack.config.* src build_scripts",
+    "lint:watch": "npm run lint -- --watch",
+    "open:src": "babel-node ./build_scripts/src_server.js",
+    "open:tunnel": "lt --port 3000",
+    "prestart": "babel-node ./build_scripts/start_message.js",
+    "share": "npm-run-all --parallel open:src open:tunnel",
+    "start": "npm-run-all --parallel open:src lint:watch test:watch",
+    "test": "mocha --reporter progress build_scripts/test_setup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -19,5 +27,31 @@
   "bugs": {
     "url": "https://github.com/Koldus/js-dev-env/issues"
   },
-  "homepage": "https://github.com/Koldus/js-dev-env#readme"
+  "homepage": "https://github.com/Koldus/js-dev-env#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chalk": "^2.4.1",
+    "css-loader": "^2.0.2",
+    "eslint": "^5.10.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-watch": "^4.0.2",
+    "fs": "0.0.1-security",
+    "jsdom": "^13.1.0",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.5",
+    "numeral": "^2.0.6",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^3.4.0"
+  }
 }

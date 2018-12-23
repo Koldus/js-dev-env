@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 62081,
+      "firstName": "Brandy",
+      "lastName": "Corwin",
+      "email": "Shawna_Weissnat9@hotmail.com"
+    },
+    {
+      "id": 58224,
+      "firstName": "Nasir",
+      "lastName": "Hermann",
+      "email": "Adam94@gmail.com"
+    },
+    {
+      "id": 94480,
+      "firstName": "Pinkie",
+      "lastName": "Dicki",
+      "email": "Arnoldo_Botsford@yahoo.com"
+    },
+    {
+      "id": 42266,
+      "firstName": "Braden",
+      "lastName": "Murray",
+      "email": "Cali.Kihn@hotmail.com"
+    },
+    {
+      "id": 46965,
+      "firstName": "Monroe",
+      "lastName": "Runte",
+      "email": "Hal96@hotmail.com"
+    },
+    {
+      "id": 8352,
+      "firstName": "Alessandro",
+      "lastName": "Roob",
+      "email": "Jadon44@gmail.com"
+    }
+  ]
+}
